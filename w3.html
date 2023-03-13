@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- this css style gives the title in h2 tags blue color -->
+    <style>
+      h2 {
+        color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- the h2 that is given color above -->
+    <h2>JavaScript HTML DOM</h2>
+    <div id="main">
+      <p>Finding HTML Elements by Tag Name</p>
+      <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+    </div>
+
+    <p id="demo"></p> 
+    <!-- two buttons given id which will be called in js below -->
+    <button id="button1">Button 1</button>
+    <button id="button2">Button 2</button>
+    
+    
+    <script>
+        // use of object document element to access and manipulate the html code
+        const demo = document.getElementById("demo"); //
+        const button1 = document.getElementById("button1");
+        const button2 = document.getElementById("button2");
+      
+        // adding event listener to buttons
+        button1.onclick = function() {
+          demo.innerHTML = document.getElementsByTagName("p")[0].innerHTML;
+        }
+      
+        button2.onclick = function() {
+          demo.innerHTML = document.getElementsByTagName("p")[1].innerHTML;
+        }
+      </script>
+      
+  </body>
+</html>
